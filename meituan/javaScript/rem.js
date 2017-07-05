@@ -6,7 +6,7 @@
 
     function refreshRem() {
         var width = docEl.getBoundingClientRect().width;
-        var rem = width / 7.5; // å°†å±å¹•å®½åº¦åˆ†æˆ7.5ä»½ï¼Œ 1ä»½ä¸º1rem
+        var rem = width / 7.5; // ½«ÆÁÄ»¿í¶È·Ö³É7.5·İ£¬ 1·İÎª1rem
         docEl.style.fontSize = rem + 'px';
     }
 
