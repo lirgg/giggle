@@ -46,3 +46,83 @@
     -webkit-background-size: 12.8rem 2rem;
     background-size: 6.4rem 1rem;
 }
+#guide{
+    width:100%;
+    height: 3.6rem;
+    overflow: hidden;
+    position: relative;
+}
+#guide ul{
+    width:200%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+    transition:left 1s ease;
+}
+#guide img{
+    width: 0.8rem;
+    height: 0.8rem;
+}
+#guide li{
+    text-align: center;
+    width:10%;
+    float:left;
+    margin-top:0.2rem;
+}
+#nav{
+    position:absolute;
+    bottom:0.2rem;
+    left:50%;
+    transform: translateX(-50%);
+}
+#nav span{
+    width: 0.16rem;
+    height: 0.16rem;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    float: left;
+    background-color: #f0efee;
+    margin-right: 0.2rem;
+}
+#nav span.active{
+    background-color: #06c1ae;
+}
+#activity{
+   display: -webkit-box;
+    text-align: center;
+    margin:0.3rem 0;
+    background-color: #fff;
+
+}
+#activity div{
+    -webkit-box-flex:1;
+}
+#activity img{
+    width: 1.24rem;
+    height: 1.24rem;
+}
+#activity .friend{
+    color: #55a40f;
+}
+#activity .low-price{
+    color: #ff3f0d;
+}
+#activity .quick-meal{
+    color: #f84fa7;
+}
+#activity h3{
+    margin: 0.2rem 0;
+}
+#guess{
+    background: #ffffff;
+    padding-left: 0.2rem;
+}
+#guess h3{
+    color: #333;
+    font-size: .34rem;
+    border-bottom: 1px solid #ccc;
+    padding: 0.2rem 0;
+}
+
