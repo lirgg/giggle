@@ -151,4 +151,169 @@
     border-top: 1px solid #ccc;
     padding-top: 0.3rem;
 }
+#merchant{
+    padding:0 0.2rem;
+}
+#merchant .info{
+    border-bottom:1px solid #ccc;
+    padding-bottom: 0.2rem;
+}
+#merchant .content{
+    padding:0.2rem 0;
+    display: -webkit-box;
+    border-bottom:1px solid #ccc;
+}
+#merchant .name{
+    font-size: .32rem;
+    font-weight: bolder;
+}
+#merchant .position{
+    color:#666;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 0.1rem 0;
+}
+#merchant .address{
+    -webkit-box-flex: 1;
+}
+#merchant .phone{
+    width: 1.4rem;
+    height: 1.2rem;
+    background: url(../img/phone.png) no-repeat center;
+    background-size: 0.38rem 0.38rem;
+    border-left: 1px solid #ccc;
+}
+#merchant .nearest{
+     background: url(../img/position.png) no-repeat left center;
+    background-size: 0.28rem 0.28rem;
+    padding-left: 0.4rem;
+    color: #EB8706;
+}
+.check{
+    color: #06c1ae;
+    padding: 0.2rem 0;
+    background:url(../img/rightarrow-blue.png) no-repeat right center;
+    -webkit-background-size: 0.38rem 0.38rem;
+    background-size: 0.38rem 0.38rem;
+}
+#combo{
+    padding: 0 0.2rem;
+}
+#combo h3{
+    border-bottom:1px solid #ccc;
+    padding-bottom:0.2rem;
+}
+#combo .discount-coupon{
+    display:-webkit-box;
+    border-bottom:1px solid #ccc;
+    width:100%;
+}
+#combo .discount-coupon li{
+   -webkit-box-flex: 1;
+    border-bottom:1px solid #ccc;
+    border-right:1px solid #ccc;
+    padding:0.22rem 0;
+    text-indent:0.1rem;  /*文本首行缩进*/
+}
+#combo .discount-coupon li:last-child{
+    border-right: 0;
+}
+#combo .price{
+    border-bottom: 1px solid #ccc;
+    padding: 0.3rem 0.4rem;
+}
+#combo .price li{
+    list-style: disc;
+    margin-top: 0.1rem;
+}
+#notice{
+    padding: 0 0.2rem;
+}
+#notice h3{
+    border-bottom: 1px solid #ccc;
+    padding: 0.2rem 0;
+}
+#notice dt{
+    color: #ff9c08;
+    margin-top: 0.2rem;
+}
+#notice dd{
+    margin-top: 0.1rem;
+    margin-left: 0.1rem;
+}
+#notice ul{
+    padding-left: 0.4rem;
+}
+#notice li{
+    list-style: disc;
+    margin-top: 0.1rem;
+}
+#evaluate{
+    padding: 0 0.2rem;
+    margin-top: 0.3rem;
+    margin-bottom: 1.4rem;
+}
+#evaluate .evaluate-title{
+    height: 0.7rem;
+    border-bottom: 1px solid #ccc;
+}
+#evaluate h3{
+    float: left;
+}
+#evaluate .star{
+    float: right;
+}
+#evaluate .item{
+    padding-top: 0.2rem;
+    border-bottom: 1px solid #ccc;
+}
+#evaluate .item-title .header{
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+    overflow: hidden;
+    float: left;
+}
+#evaluate .item-title .header img{
+    width: 0.8rem;
+    height: 0.8rem;
+}
+#evaluate .item-title .desc{
+    float: left;
+    margin-top: 0.05rem;
+    margin-left: 0.3rem;
+}
+#evaluate .item-title .name{
+    font-size: 0.24rem;
+    color: #666;
+    margin-bottom: 0.05rem;
+}
+#evaluate .item-title .desc img{
+    width: 0.28rem;
+    height: 0.28rem;
+}
+#evaluate .item-title .date{
+    font-size: .24rem;
+    margin-left: 0.2rem;
+}
+#evaluate .item-content{
+    clear: both;    /*清除浮动*/
+    line-height: 1.5;
+    padding-top: 0.2rem;
+}
+#evaluate .item-img{
+    margin: 0.2rem 0;
+}
+#evaluate .item-img img{
+    width: 1.1rem;
+    height: 1.1rem;
+    float: left;
+    margin-right: 0.1rem;
+}
+#evaluate .earnest{
+    width: 1rem;
+    height: 1rem;
+    float: right;
+}
 
