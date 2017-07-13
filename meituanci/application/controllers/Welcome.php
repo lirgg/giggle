@@ -28,6 +28,9 @@ class Welcome extends CI_Controller
     {
         $this->load->view('detail');
     }
+    public function success(){
+        $this->load->view('success');
+    }
 
     /*public function login_page()
     {

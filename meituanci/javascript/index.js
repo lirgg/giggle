@@ -37,7 +37,13 @@ $(document).on("pageinit",function(event){
         location.href = "User/login_page";
     });
 
+    $("#user-detail").on("tap",function(){
+        location.href = "user/user_detail";
+    });
 
+    $("#logout").on("tap",function(){
+        location.href = "user/logout";
+    });
 
     function swipeGuide(index){
         $navSpan.eq(index).addClass("active").siblings().removeClass("active");
@@ -46,6 +52,7 @@ $(document).on("pageinit",function(event){
         });
     }
 });
+
 
 
 /*$(document).ready(function(){

@@ -17,19 +17,35 @@
 
 </head>
 <body>
-    <div data-role="page">
-        <div data-role="header" id="header">
-            <div id="city">
-                哈尔滨
-            </div>
-            <div id="search">
-                <input type="text" placeholder="请输入商家/品类/商圈">
-            </div>
-            <div id="mine">
-                <span>我的</span>
-                <span id="login">登录</span>
-            </div>
+<div data-role="page">
+    <div data-role="header" id="header">
+        <div id="city">
+            哈尔滨
         </div>
+        <div id="search">
+            <input type="text" placeholder="请输入商家/品类/商圈">
+        </div>
+
+        <!--            <a href="#popupMenu" data-rel="popup" data-transition="slideup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-gear ui-btn-icon-left ui-btn-a">Actions...</a>-->
+        <div data-role="popup" id="popupMenu" data-theme="a">
+                    <ul data-role="listview" data-inset="true" style="min-width:2rem;">
+                            <li><a id="user-detail" href="javascript:;">个人信息</a></li>
+                            <li><a id="logout" href="javascript:;">退出登录</a></li>
+                        </ul>
+        </div>
+
+
+        <div id="mine">
+            <?php
+            $userinfo = $this->session->userinfo;
+            if($userinfo){
+                echo "<a href='#popupMenu' data-rel='popup' data-transition='slideup'>". $userinfo -> username ."</a>";
+            }else{
+                echo "<span id='login'>登录</span>";
+            }
+            ?>
+        </div>
+    </div>
         <div role="main" class="ui-content">
             <div id="banner"></div>
             <div id="guide">
