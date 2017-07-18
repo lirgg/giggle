@@ -17,35 +17,35 @@
 
 </head>
 <body>
-<div data-role="page">
-    <div data-role="header" id="header">
-        <div id="city">
-            哈尔滨
-        </div>
-        <div id="search">
-            <input type="text" placeholder="请输入商家/品类/商圈">
-        </div>
+    <div data-role="page">
+        <div data-role="header" id="header">
+            <div id="city">
+                哈尔滨
+            </div>
+            <div id="search">
+                <input type="text" placeholder="请输入商家/品类/商圈">
+            </div>
 
-        <!--            <a href="#popupMenu" data-rel="popup" data-transition="slideup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-gear ui-btn-icon-left ui-btn-a">Actions...</a>-->
-        <div data-role="popup" id="popupMenu" data-theme="a">
-                    <ul data-role="listview" data-inset="true" style="min-width:2rem;">
-                            <li><a id="user-detail" href="javascript:;">个人信息</a></li>
-                            <li><a id="logout" href="javascript:;">退出登录</a></li>
-                        </ul>
-        </div>
+<!--            <a href="#popupMenu" data-rel="popup" data-transition="slideup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-gear ui-btn-icon-left ui-btn-a">Actions...</a>-->
+            <div data-role="popup" id="popupMenu" data-theme="a">
+                <ul data-role="listview" data-inset="true" style="min-width:2rem;">
+                    <li><a id="user-detail" href="javascript:;">个人信息</a></li>
+                    <li><a id="logout" href="javascript:;">退出登录</a></li>
+                </ul>
+            </div>
 
 
-        <div id="mine">
-            <?php
-            $userinfo = $this->session->userinfo;
-            if($userinfo){
-                echo "<a href='#popupMenu' data-rel='popup' data-transition='slideup'>". $userinfo -> username ."</a>";
-            }else{
-                echo "<span id='login'>登录</span>";
-            }
-            ?>
+            <div id="mine">
+                <?php
+                    $userinfo = $this->session->userinfo;
+                    if($userinfo){
+                        echo "<a href='#popupMenu' data-rel='popup' data-transition='slideup'>". $userinfo -> username ."</a>";
+                    }else{
+                        echo "<span id='login'>登录</span>";
+                    }
+                ?>
+            </div>
         </div>
-    </div>
         <div role="main" class="ui-content">
             <div id="banner"></div>
             <div id="guide">
@@ -157,174 +157,21 @@
             <div id="guess">
                 <h3>猜你喜欢</h3>
                 <ul id="menu">
-                    <li>
-                        <img src="img/xianyuxian.jpg" alt="" class="brand">
-                        <div class="detail">
-                            <p class="detail-name">鲜芋仙</p>
-                            <p class="detail-desc">[11店通用]10元代金券1份</p>
-                            <div>
-                                <span class="price">7.5元</span>
-                                <span>门市价：10元</span>
-                                <span class="sold">已售147053</span>
+                    <?php foreach ($result as $product) {?>
+                        <li>
+                            <input type="hidden" class='product-id' value="<?php echo $product->product_id?>">
+                            <img src="<?php echo $product->img?>" alt="" class="brand">
+                            <div class="detail">
+                                <p class="detail-name"><?php echo $product->product_name?></p>
+                                <p class="detail-desc"><?php echo $product->description?></p>
+                                <div>
+                                    <span class="price"><?php echo $product->discount_price ?>元</span>
+                                    <span>门市价：<?php echo $product->price?>元</span>
+                                    <span class="sold">已售<?php echo $product->num == null?0:$product->num;?></span>
+                                </div>
                             </div>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="img/xianyuxian.jpg" alt="" class="brand">
-                        <div class="detail">
-                            <p class="detail-name">鲜芋仙</p>
-                            <p class="detail-desc">[11店通用]10元代金券1份</p>
-                            <div>
-                                <span class="price">7.5元</span>
-                                <span>门市价：10元</span>
-                                <span class="sold">已售147053</span>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="img/xianyuxian.jpg" alt="" class="brand">
-                        <div class="detail">
-                            <p class="detail-name">鲜芋仙</p>
-                            <p class="detail-desc">[11店通用]10元代金券1份</p>
-                            <div>
-                                <span class="price">7.5元</span>
-                                <span>门市价：10元</span>
-                                <span class="sold">已售147053</span>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="img/xianyuxian.jpg" alt="" class="brand">
-                        <div class="detail">
-                            <p class="detail-name">鲜芋仙</p>
-                            <p class="detail-desc">[11店通用]10元代金券1份</p>
-                            <div>
-                                <span class="price">7.5元</span>
-                                <span>门市价：10元</span>
-                                <span class="sold">已售147053</span>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="img/xianyuxian.jpg" alt="" class="brand">
-                        <div class="detail">
-                            <p class="detail-name">鲜芋仙</p>
-                            <p class="detail-desc">[11店通用]10元代金券1份</p>
-                            <div>
-                                <span class="price">7.5元</span>
-                                <span>门市价：10元</span>
-                                <span class="sold">已售147053</span>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="img/xianyuxian.jpg" alt="" class="brand">
-                        <div class="detail">
-                            <p class="detail-name">鲜芋仙</p>
-                            <p class="detail-desc">[11店通用]10元代金券1份</p>
-                            <div>
-                                <span class="price">7.5元</span>
-                                <span>门市价：10元</span>
-                                <span class="sold">已售147053</span>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="img/xianyuxian.jpg" alt="" class="brand">
-                        <div class="detail">
-                            <p class="detail-name">鲜芋仙</p>
-                            <p class="detail-desc">[11店通用]10元代金券1份</p>
-                            <div>
-                                <span class="price">7.5元</span>
-                                <span>门市价：10元</span>
-                                <span class="sold">已售147053</span>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="img/xianyuxian.jpg" alt="" class="brand">
-                        <div class="detail">
-                            <p class="detail-name">鲜芋仙</p>
-                            <p class="detail-desc">[11店通用]10元代金券1份</p>
-                            <div>
-                                <span class="price">7.5元</span>
-                                <span>门市价：10元</span>
-                                <span class="sold">已售147053</span>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="img/xianyuxian.jpg" alt="" class="brand">
-                        <div class="detail">
-                            <p class="detail-name">鲜芋仙</p>
-                            <p class="detail-desc">[11店通用]10元代金券1份</p>
-                            <div>
-                                <span class="price">7.5元</span>
-                                <span>门市价：10元</span>
-                                <span class="sold">已售147053</span>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="img/xianyuxian.jpg" alt="" class="brand">
-                        <div class="detail">
-                            <p class="detail-name">鲜芋仙</p>
-                            <p class="detail-desc">[11店通用]10元代金券1份</p>
-                            <div>
-                                <span class="price">7.5元</span>
-                                <span>门市价：10元</span>
-                                <span class="sold">已售147053</span>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="img/xianyuxian.jpg" alt="" class="brand">
-                        <div class="detail">
-                            <p class="detail-name">鲜芋仙</p>
-                            <p class="detail-desc">[11店通用]10元代金券1份</p>
-                            <div>
-                                <span class="price">7.5元</span>
-                                <span>门市价：10元</span>
-                                <span class="sold">已售147053</span>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="img/xianyuxian.jpg" alt="" class="brand">
-                        <div class="detail">
-                            <p class="detail-name">鲜芋仙</p>
-                            <p class="detail-desc">[11店通用]10元代金券1份</p>
-                            <div>
-                                <span class="price">7.5元</span>
-                                <span>门市价：10元</span>
-                                <span class="sold">已售147053</span>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="img/xianyuxian.jpg" alt="" class="brand">
-                        <div class="detail">
-                            <p class="detail-name">鲜芋仙</p>
-                            <p class="detail-desc">[11店通用]10元代金券1份</p>
-                            <div>
-                                <span class="price">7.5元</span>
-                                <span>门市价：10元</span>
-                                <span class="sold">已售147053</span>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="img/xianyuxian.jpg" alt="" class="brand">
-                        <div class="detail">
-                            <p class="detail-name">鲜芋仙</p>
-                            <p class="detail-desc">[11店通用]10元代金券1份</p>
-                            <div>
-                                <span class="price">7.5元</span>
-                                <span>门市价：10元</span>
-                                <span class="sold">已售147053</span>
-                            </div>
-                        </div>
-                    </li>
+                        </li>
+                    <?php }?>
                 </ul>
             </div>
             <div id="go-top"></div>

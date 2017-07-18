@@ -13,21 +13,22 @@
     <script src="javascript/rem.js"></script>
     <script src="javascript/jquery-1.12.4.js"></script>
     <script src="javascript/index.js"></script>
+    <script src="javascript/login.js"></script>
     <script src="javascript/jquery.mobile-1.4.5.js"></script>
-    <title>Document</title>
+    <title>登录</title>
 </head>
 <body>
     <div id="header">
         登录
     </div>
-    <form method="post" action="User/login" data-ajax="false" id="login-form">
+    <form method="post" action="user/login" data-ajax="false" id="login-form">
         <div class="ui-field-contain">
             <label for="username">用户名:</label>
             <input type="text" name="username" id="username" placeholder="请输入用户名">
             <label for="password">密码:</label>
             <input type="password" name="password" id="password" placeholder="请输入密码">
             <button class="ui-shadow ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-user">登录</button>
-            <button class="ui-shadow ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-tag" type="button">注册</button>
+            <button class="ui-shadow ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-tag" type="button" id="register_page">新用户注册</button>
         </div>
     </form>
 </body>

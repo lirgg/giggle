@@ -17,46 +17,46 @@
     <title>用户详情</title>
 </head>
 <body>
-    <div id="header">
-        <div id="header">
-            <a id="home" href="javascript:;"
-               class="ui-shadow ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-home ui-btn-left"
-               style="margin: 0;">首页</a>
-            用户详情
-        </div>
-        <h1 style="margin-top: 1.02rem;">当前用户为: <?php echo $this->session->userinfo->username; ?></h1>
-        <h2>订单列表</h2>
+<div id="header">
+    <a id="home" href="javascript:;"
+       class="ui-shadow ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-home ui-btn-left"
+       style="margin: 0;">首页</a>
+    用户详情
+</div>
+<h1 style="margin-top: 1.02rem;">当前用户为: <?php echo $this->session->userinfo->username; ?></h1>
+<h2>订单列表</h2>
 
-        <table data-role="table" data-mode="columntoggle" class="ui-body-d ui-shadow table-stripe ui-responsive"
-               data-column-btn-theme="a" data-column-popup-theme="a" data-column-btn-text="选择显示的列">
-            <thead>
-            <tr class="ui-bar-a">
-                <th data-priority="1">订单ID</th>
-                <th data-priority="1">产品名称</th>
-                <th data-priority="1">产品原单价</th>
-                <th data-priority="1">数量</th>
-                <th data-priority="1">订单单价</th>
-                <th data-priority="1">订单总价</th>
-            </tr>
-                     
-            </thead>
-                     
-            <tbody>
-                        <?php foreach ($order_list as $order): ?>
-                <tr>
-                    <td><?php echo $order->order_id; ?></td>
-                    <td><?php echo $order->product_name; ?></td>
-                    <td><?php echo $order->price; ?></td>
-                    <td><?php echo $order->num; ?></td>
-                    <td><?php echo $order->order_price; ?></td>
-                    <td><?php echo $order->total; ?></td>
-                </tr>
+<table data-role="table" data-mode="columntoggle" class="ui-body-d ui-shadow table-stripe ui-responsive"
+       data-column-btn-theme="a" data-column-popup-theme="a" data-column-btn-text="选择显示的列">
+    <thead>
+    <tr class="ui-bar-a">
+        <th data-priority="1">订单ID</th>
+        <th data-priority="1">产品名称</th>
+        <th data-priority="1">产品原单价</th>
+        <th data-priority="1">数量</th>
+        <th data-priority="1">订单单价</th>
+        <th data-priority="1">订单总价</th>
+    </tr>
+             
+    </thead>
+             
+    <tbody>
+                <?php foreach ($order_list as $order): ?>
+        <tr>
+            <td><?php echo $order->order_id; ?></td>
+            <td><?php echo $order->product_name; ?></td>
+            <td><?php echo $order->price; ?></td>
+            <td><?php echo $order->num; ?></td>
+            <td><?php echo $order->order_price; ?></td>
+            <td><?php echo $order->total; ?></td>
+        </tr>
 
-            <?php endforeach; ?>
-                     
-            </tbody>
-                   
-        </table>
-    </div>
+    <?php endforeach; ?>
+             
+    </tbody>
+           
+</table>
+
+
 </body>
 </html>
