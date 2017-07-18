@@ -30,20 +30,22 @@ $(document).on("pageinit",function(event){
     });
 
     $("#menu li").on("tap", function(){
-        location.href = "welcome/detail";
+        var productId = $(this).children('.product-id').val();
+        location.href = "welcome/detail/"+productId;
     });
 
     $("#login").on("tap", function(){
-        location.href = "User/login_page";
+        location.href = "user/login_page";
     });
 
-    $("#user-detail").on("tap",function(){
+    $("#user-detail").on("tap", function(){
         location.href = "user/user_detail";
     });
 
-    $("#logout").on("tap",function(){
+    $("#logout").on("tap", function(){
         location.href = "user/logout";
     });
+
 
     function swipeGuide(index){
         $navSpan.eq(index).addClass("active").siblings().removeClass("active");
@@ -52,7 +54,6 @@ $(document).on("pageinit",function(event){
         });
     }
 });
-
 
 
 /*$(document).ready(function(){

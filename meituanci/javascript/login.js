@@ -1,12 +1,13 @@
 /**
- * Created by Administrator on 2017/7/12.
+ * Created by xiecheng on 2017/7/12.
  */
+$(document).on("pageinit", function(){
+    $("#register_page").on("tap", function(){
+        location.href = "user/register_page";
+    });
 
-$(document).on("pageinit",function(){
-    $("#register_page").on("tap",function(){
-        location.href = "welcome/register_page";
-    });
     $("#login_page").on("tap", function(){
-        location.href = "welcome/login_page";
+        location.href = "user/login_page";
     });
+
 });
