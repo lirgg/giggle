@@ -20,6 +20,7 @@ class User extends CI_Controller {
         $username = $this -> input -> post("username");
         $password = $this -> input -> post("password");
 
+       //根据数据模型获取数据
         $row = $this -> user_model -> get_by_username_password($username, $password);
         if($row){
             $this->session->set_userdata(array(
