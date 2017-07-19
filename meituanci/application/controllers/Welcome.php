@@ -71,7 +71,14 @@ class Welcome extends CI_Controller {
 //        $user_id = $userinfo -> user_id;
 
 
-        $this -> load -> view('detail',array('row'=>$row,'results'=>$results));
+        $this -> load -> view('detail',array(
+
+      // 跟控制器中的view传参的名字一致即可(在view中调用时)
+
+        'row'=>$row,
+        'results'=>$results
+
+        ));
     }
 
     public function success()
