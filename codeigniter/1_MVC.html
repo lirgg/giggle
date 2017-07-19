@@ -1,0 +1,50 @@
+M:model模型  与数据库打交道的 对于数据库的增删改查
+V:view视图 用户看到的界面
+C:controller控制器  是M和V的桥梁 控制跳转  接受界面的请求
+
+xampp：集成了mysql、apache等
+
+解压3.1.5.zip
+把application\system\index.php拷贝到项目中
+把项目放在C:\xampp\htdocs
+在浏览器里输入 http://localhost/项目名称
+如果看到欢迎界面，表示配置成功
+
+phpstorm：
+注册：license server
+http://idea.iteblog.com/key.php
+
+http://localhost/meituanci
+http://localhost/meituanci/index.php/welcome/index
+
+
+application/config/autoload.php
+61行：$autoload['libraries'] = array('database', 'session');
+92行：$autoload['helper'] = array('url');
+
+application/config/config.php
+38行：$config['index_page'] = '';
+
+application/config/database.php
+'hostname' => 'localhost',
+'username' => 'root',
+'password' => '',
+'database' => 'meituan',
+
+路径问题：    <base href="<?php echo site_url(); ?>">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
